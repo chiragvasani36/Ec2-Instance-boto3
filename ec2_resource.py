@@ -1,5 +1,5 @@
 print('This is boto3...')
-
+print($(Password))
 """import boto3
 ec2_resource=boto3.resource('ec2')
 response=ec2_resource.create_instances(

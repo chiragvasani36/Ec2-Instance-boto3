@@ -32,6 +32,9 @@ steps:
   inputs:
     scriptSource: 'filePath'
     scriptPath: '$(System.DefaultWorkingDirectory)/ec2_resource.py'
+
+- bash: |
+      echo $Password
     
 
 

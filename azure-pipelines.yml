@@ -8,9 +8,6 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-  env:
-    - name: Password1
-      value: $(Password)
 strategy:
   matrix:
     Python37:
@@ -32,10 +29,18 @@ steps:
     scriptSource: 'filePath'
     scriptPath: '$(System.DefaultWorkingDirectory)/ec2_resource.py'
     
+
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      export VAR= $(Password)
+
 - task: Bash@3
   inputs:
     targetType: 'inline'
     script: |
       # Write your commands here
       
-      echo $PASSWORD1
+      echo $VAR

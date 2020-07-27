@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
   env:
-    Password:$(Password)
+    Password:${{Password}}
 strategy:
   matrix:
     Python37:

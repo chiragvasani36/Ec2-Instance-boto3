@@ -25,9 +25,9 @@ steps:
   displayName: 'Install dependencies'
 
 - bash: |
-      FOO=$Password
+      Password=$Password
       echo "##vso[task.setvariable variable=FOO]$FOO"
-      
+      echo $Password
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'

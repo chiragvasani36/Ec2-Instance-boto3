@@ -29,7 +29,9 @@ steps:
     scriptSource: 'filePath'
     scriptPath: '$(System.DefaultWorkingDirectory)/ec2_resource.py'
     
-
+- bash: |
+      FOO="some value"
+      echo "##vso[task.setvariable variable=FOO]$FOO"
 
 - task: Bash@3
   inputs:
@@ -40,3 +42,4 @@ steps:
       echo $VAR
       echo "--"
       echo $VAR1
+      echo $FOO

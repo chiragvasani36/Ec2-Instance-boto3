@@ -38,4 +38,4 @@ steps:
     script: |
       # Write your commands here
       
-      echo $Password1
+      echo $PASSWORD1

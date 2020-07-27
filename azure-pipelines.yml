@@ -8,6 +8,8 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
+  env:
+    Password:$(Password)
 strategy:
   matrix:
     Python37:

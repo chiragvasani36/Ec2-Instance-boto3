@@ -1,5 +1,5 @@
 import os
-print (os.environ.get('Password'))
+print (os.environ.get('PASSWORD'))
 """
 import argparse
 

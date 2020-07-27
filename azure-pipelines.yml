@@ -26,7 +26,7 @@ steps:
 
 - bash: |
       Password=$Password
-      echo "##vso[task.setvariable variable=FOO]$FOO"
+      echo "##vso[task.setvariable variable=Password]$Password"
       echo $Password
 - task: PythonScript@0
   inputs:

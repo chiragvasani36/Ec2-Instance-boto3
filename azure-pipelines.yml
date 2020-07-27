@@ -9,7 +9,7 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
   env:
-    - name: Password
+    - name: Password1
       value: $(Password)
 strategy:
   matrix:
@@ -31,4 +31,11 @@ steps:
   inputs:
     scriptSource: 'filePath'
     scriptPath: '$(System.DefaultWorkingDirectory)/ec2_resource.py'
-    arguments: '--pass1 $(Password)'
+    
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo $Password1

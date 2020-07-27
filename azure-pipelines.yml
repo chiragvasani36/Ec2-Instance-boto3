@@ -36,6 +36,7 @@ steps:
     targetType: 'inline'
     script: |
       export VAR=$PASSWORD
+      export VAR1=$(PASSWORD)
 
 - task: Bash@3
   inputs:
@@ -44,3 +45,5 @@ steps:
       # Write your commands here
       
       echo $VAR
+      echo "--"
+      echo $VAR1

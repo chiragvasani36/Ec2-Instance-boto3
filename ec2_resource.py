@@ -1,17 +1,7 @@
 import os
-print (os.environ.get('PASSWORD'))
-"""
-import argparse
-
-parser = argparse.ArgumentParser(description='Process some integers.')
-parser.add_argument('--pass1',  help='value of pass')
-
-
-args = parser.parse_args()
-print(args.pass1)
-
+print (os.environ.get('AWS_SECRET_ACCESS_KEY'))
 import boto3
-ec2_resource=boto3.resource('ec2')
+ec2_resource=boto3.resource('ec2',aws_access_key_id=os.environ.get('AWS_SECRET_ACCESS_KEY'),aws_secret_access_key=os.environ.get('AWS_ACCESS_KEY_ID'))
 response=ec2_resource.create_instances(
     ImageId='ami-08f3d892de259504d',
     InstanceType='t2.micro',
@@ -19,4 +9,3 @@ response=ec2_resource.create_instances(
     MinCount=1
 )
 print(response)
-"""

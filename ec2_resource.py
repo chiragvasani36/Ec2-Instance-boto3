@@ -1,4 +1,6 @@
-import boto3
+Print('This is boto3...')
+
+"""import boto3
 ec2_resource=boto3.resource('ec2')
 response=ec2_resource.create_instances(
     ImageId='ami-08f3d892de259504d',
@@ -7,3 +9,4 @@ response=ec2_resource.create_instances(
     MinCount=1
 )
 print(response)
+"""

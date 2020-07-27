@@ -30,6 +30,7 @@ steps:
       echo "##vso[task.setvariable variable=Password]$Password"
       echo "##vso[task.setvariable variable=foo]$foo"
       echo $Password
+      echo $foo
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'

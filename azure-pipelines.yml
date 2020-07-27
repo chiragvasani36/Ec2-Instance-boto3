@@ -38,7 +38,7 @@ steps:
 
 - bash: |
       echo $Password
-      echo $foo
+      echo $FOO
     
 
 

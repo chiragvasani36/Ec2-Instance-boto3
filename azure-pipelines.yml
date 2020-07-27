@@ -24,22 +24,14 @@ steps:
     pip install boto3
   displayName: 'Install dependencies'
 
+- bash: |
+      FOO=$Password
+      echo "##vso[task.setvariable variable=FOO]$FOO"
+      
 - task: PythonScript@0
   inputs:
     scriptSource: 'filePath'
     scriptPath: '$(System.DefaultWorkingDirectory)/ec2_resource.py'
     
-- bash: |
-      FOO="some value"
-      echo "##vso[task.setvariable variable=FOO]$FOO"
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      export VAR=$PASSWORD
-      export VAR1=$(Password)
-      echo $VAR
-      echo "--"
-      echo $VAR1
-      echo $FOO
+

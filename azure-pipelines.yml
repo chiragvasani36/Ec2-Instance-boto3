@@ -24,9 +24,9 @@ steps:
     targetType: 'inline'
     script: |
       # Write your commands here
-      echo $(demo1)
+      echo $(DEMO1)
       echo 'hi..'
-      echo $(demo)
+      echo $(DEMO)
 
 - task: UsePythonVersion@0
   inputs:

@@ -24,6 +24,7 @@ steps:
 
 
 - task: UsePythonVersion@0
+  
   inputs:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
@@ -36,6 +37,10 @@ steps:
 
      
 - task: PythonScript@0
+  env: 
+  - AWS_ACCESS_KEY_ID : $(AWS_ACCESS_KEY_ID1)
+  - AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY1)
+
   inputs:
     scriptSource: 'filePath'
     scriptPath: '$(System.DefaultWorkingDirectory)/ec2_resource.py'

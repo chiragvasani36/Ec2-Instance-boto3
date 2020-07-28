@@ -25,7 +25,7 @@ steps:
     script: |
       # Write your commands here
       
-      echo $env:demo
+      echo $(demo)
 
 - task: UsePythonVersion@0
   inputs:

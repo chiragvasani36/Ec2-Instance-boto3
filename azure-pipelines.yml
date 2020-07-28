@@ -26,7 +26,7 @@ steps:
       # Write your commands here
       
       echo $env:demo
-- task
+
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'

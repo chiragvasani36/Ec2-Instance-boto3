@@ -16,9 +16,9 @@ strategy:
 variables:
 - group: AWS_EC2
 - name: AWS_ACCESS_KEY_ID
-  value: $(AWS_ACCESS_KEY_ID)
+  value: $(AWS_ACCESS_KEY_ID1)
 - name: AWS_SECRET_ACCESS_KEY
-  value: $(AWS_SECRET_ACCESS_KEY)
+  value: $(AWS_SECRET_ACCESS_KEY1)
 
 steps:
 

@@ -24,13 +24,7 @@ steps:
     pip install boto3
   displayName: 'Install dependencies'
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      NOT_SEC=$(NOT_SEC)
-      echo "##vso[task.setvariable variable=NOT_SEC]$NOT_SEC"
+
      
 - task: PythonScript@0
   inputs:
